@@ -1,14 +1,15 @@
 def minDest(arr, n, x, y):
     if x not in arr or y not in arr:
         return -1
-    c = 10000
-    for  i in range(n):
-        if arr[i]==x:
-            for j in range(n):
-                if arr[j] == y:
-                    if abs(i-j)<c:
-                        c= abs(i-j)
-    return c
+    else:
+        b = [i for i in range(n) if arr[i]==x]
+        c = [i for i in range(n) if arr[i]==y]
+        f = []
+        for i in c:
+            for j in b:
+                f.append(abs(i-j))
+
+        return min(f)
 
 a = [13, 98, 5, 10, 23, 13, 4, 53, 60, 78, 66, 68, 44, 69, 79, 71, 90, 17, 91, 84, 34, 52, 12, 11, 57, 61, 2]
 n = len(a)
