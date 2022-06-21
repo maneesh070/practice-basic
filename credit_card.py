@@ -14,10 +14,8 @@ def cred(credit, r, mr):
     print(round(sum_p0, 2))
     return ub1
 
-
-
-credit = int(input("What is the spending(5000): "))
-r= int(input("Yearly card interest rate is(18): "))
-mr = int(input("Min Monthly rate to be paid per month(2): "))
+credit = int(input("What is the spending: "))
+r= int(input("Yearly card interest rate is(%): "))
+mr = int(input("Min Monthly rate to be paid per month(%): "))
 balance = cred(credit, r, mr)
 print(round(balance, 2))
