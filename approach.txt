@@ -1,0 +1,8 @@
+1. Write pseudo code.
+    - write the approach
+    - assume as many things as you want (assume as if a function is given)
+2. Write a main function and call the required function inside the main function.
+3. Keep the mind calm.
+4. Do as slow as possible.
+5. Write only when you are sure what it does.
+6. Try running a statement in shell to see what it does and experiment.
