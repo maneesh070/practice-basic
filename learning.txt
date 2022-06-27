@@ -1,0 +1,4 @@
+1. Never define a function inside another function (except few cases).
+2. Never use a list(for one element) where a variable can work the same.
+3. Function name should be short and meaningful.
+4. A function should do exactly one task (not necessary but good practice).
