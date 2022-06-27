@@ -1,17 +1,18 @@
-def get_min_bal(bal, r):
-    min_pay = 10
-    org_bal = bal
-    while bal > 0:
-        bal = org_bal
+def rem_bal_aftr_12_mnths(bal, r, pay):
         for i in range(12):
-            b0 = bal - min_pay
-            bal = b0*r/12 + b0
-        min_pay += 10
-    return min_pay - 10
+            bal = bal - pay
+            bal = bal*r + bal
+        return bal
 
-# x = 3329
-# r = .20
-x = int(input("Initial debt: "))
-r = float(input("Rate of interest: "))
-installment = get_min_bal(x, r)
-print("Lowest payment", installment)
+def min_pay(balance, rate):
+    r = rate/12
+    min_pay  = 10
+    while rem_bal_aftr_12_mnths(balance, r, min_pay) > 0:
+        min_pay += 10
+    return min_pay
+
+
+bal = int(input("Enter principal value: "))
+annual_rate = 0.2
+min_pay = min_pay(bal,annual_rate)
+print(f'Lowest payment: {min_pay}')
