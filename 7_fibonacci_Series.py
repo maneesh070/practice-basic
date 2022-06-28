@@ -1,9 +1,10 @@
-def feb(x):
-    if x == 0 or x == 1:
-        return 1
+def fib_efficient(n, d):
+    if n in d:
+        return d[n]
     else:
-        return feb(x - 1) + feb(x - 2)
+        ans = fib_efficient(n-1,d) + fib_efficient(n-2, d)
+        d[n] = ans
+        return ans
 
-x = int(input("Enter integer from where to start: "))
-fibseries = feb(x)
-print(fibseries)
+d = {1:1, 2:2}
+print(fib_efficient(12, d))
