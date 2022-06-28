@@ -2,3 +2,5 @@
 2. Never use a list(for one element) where a variable can work the same.
 3. Function name should be short and meaningful.
 4. A function should do exactly one task (not necessary but good practice).
+5. -0.01 <= bal <= 0.01 this expression is wrong.
+6. -0.01 <= bal and bal <= 0.01 this is correct expression.
