@@ -4,3 +4,16 @@
 4. A function should do exactly one task (not necessary but good practice).
 5. -0.01 <= bal <= 0.01 this expression is wrong.
 6. -0.01 <= bal and bal <= 0.01 this is correct expression.
+
+Command Line
+1. ls : Lists files and folders
+    ls -a lists "all" the files and folders (including hidden files)
+    ls -l lists all files and folders in "long" format
+    (ls -la) is equivalent to (ls -a -l)
+2. cd: Change directory
+    cd . does not do anything (. represents present folder)
+    cd .. opens parent folder
+    cd - opens previously opened folder
+    cd ~ opens home folder (/Users/maneesh)
+    cd / opens root folder (/)(topmost folder)
+3. pwd: lists(tells) present working directory
