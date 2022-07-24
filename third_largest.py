@@ -1,19 +1,23 @@
 def thirdLargest(arr, n):
-        iteration = 0
-        new_list = []
-        j = 0
-        while iteration < n:
-            maximum = float('-inf')
-            for i in range(n - iteration):
-                if arr[i] > maximum:
-                    maximum = arr[i]
-                    j = i
-            arr.pop(j)
-            new_list.append(maximum)
-            iteration += 1
+        first_largest = float('-inf')
+        second_largest = float('-inf')
+        third_largest = float('-inf')
         if n < 3:
             return -1
-        return new_list[2]
-arr = [1,3]
+        else:
+            for i in range(n):
+                if arr[i] >= first_largest:
+                    third_largest = second_largest
+                    second_largest = first_largest
+                    first_largest = arr[i]
+                elif arr[i] >= second_largest and arr[i] < first_largest:
+                    third_largest = second_largest
+                    second_largest = arr[i]
+                elif arr[i] >= third_largest and arr[i] < second_largest:
+                    third_largest = arr[i]
+        return third_largest
+
+
+arr = [1,3, 5, 7,5, 5]
 n = len(arr)
 print(thirdLargest(arr, n))
